@@ -11,9 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stefanini.Business", "Stefa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stefanini.Application", "Stefanini.Application\Stefanini.Application.csproj", "{19DD6C2A-6D94-4440-B1CE-D100E01C4E8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stefanini.ApiRest", "Stefanini.ApiRest\Stefanini.ApiRest.csproj", "{E07EC822-F2CD-4B50-B3AE-F6726291C492}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stefanini.ApiRest", "Stefanini.ApiRest\Stefanini.ApiRest.csproj", "{E07EC822-F2CD-4B50-B3AE-F6726291C492}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stefanini.IoC", "Stefanini.IoC\Stefanini.IoC.csproj", "{87EB140D-2D0E-47C6-95F1-2B877C05BA2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stefanini.IoC", "Stefanini.IoC\Stefanini.IoC.csproj", "{87EB140D-2D0E-47C6-95F1-2B877C05BA2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{742F58DE-DCA2-43B0-89F1-5914A708C628}"
+	ProjectSection(SolutionItems) = preProject
+		Database\Database.mdf = Database\Database.mdf
+		Database\Database_log.ldf = Database\Database_log.ldf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
