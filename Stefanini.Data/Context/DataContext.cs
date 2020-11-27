@@ -1,19 +1,14 @@
-﻿using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Stefanini.Data.Mappings;
 
 namespace Stefanini.Data.Context
 {
     public class DataContext : DbContext
     {
-        public DataContext() : base(new DbContextOptionsBuilder<DbContext>().UseSqlServer(new SqlConnection(@"Data Source=localhost\sqlservertheos;Initial Catalog=DATABASE;User ID=sa;Password=sys@36911")).Options)
-        { 
+        public DataContext(IConfiguration configuration) : base(new DbContextOptionsBuilder<DbContext>().UseSqlServer(configuration.GetConnectionString("DATABASE")).Options)
+        {
         }
-
-        //public DataContext(DbContextOptionsBuilder<DbContext> optionsBuilder) : base(optionsBuilder.Options)
-        //{
-
-        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

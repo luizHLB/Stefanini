@@ -1,15 +1,13 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Stefanini.Domain.Interfaces.Application;
-using Stefanini.Domain.Interfaces.Service;
-using Stefanini.Business.Services;
-using Stefanini.Domain.Interfaces.Repository;
-using Stefanini.Data.Repositories;
-using Stefanini.Data.Context;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Data.SqlClient;
-using Stefanini.Application.Apps;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Stefanini.Application.Apps;
+using Stefanini.Business.Services;
+using Stefanini.Data.Context;
+using Stefanini.Data.Repositories;
+using Stefanini.Domain.Interfaces.Application;
+using Stefanini.Domain.Interfaces.Repository;
+using Stefanini.Domain.Interfaces.Service;
 
 namespace Stefanini.IoC
 {
@@ -27,7 +25,6 @@ namespace Stefanini.IoC
 
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            //services.AddDbContext<DataContext>(options => options.UseSqlServer(new SqlConnection("")));
             services.AddDbContext<DataContext>();
 
         }
